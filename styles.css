@@ -902,25 +902,6 @@ img, video {
   flex-wrap: wrap;
 }
 
-
-/* Faixa Animada de Black Friday */
-.banner-faixa {
-    width: 100%;
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa a largura */
-    white-space: nowrap; /* Garante que o conteúdo fique em uma única linha */
-    background-color: #000000; /* Fundo preto */
-    border-top: 3px solid #FFD700; /* Borda dourada */
-    border-bottom: 3px solid #FFD700; /* Borda dourada */
-    padding: 10px 0;
-    box-sizing: border-box;
-    margin-top: 40px; /* Espaçamento após a seção de oferta */
-}
-
-.conteudo-animado {
-    display: inline-block;
-    animation: deslizar 20s linear infinite; /* Aplica a animação "deslizar" */
-}
-
 .conteudo-animado span {
     font-family: var(--font-body);
     font-size: 1.2em;
