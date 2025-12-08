@@ -20,5 +20,5 @@ jobs:
         port: 21 
         protocol: ftp
         local-dir: "./"
-        server-dir: "public_html/autoridadearquetipica"
+        server-dir: "public_html/autoridadearquetipica/"
 
