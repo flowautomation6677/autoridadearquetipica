@@ -20,6 +20,6 @@ jobs:
         port: 21 
         protocol: ftp
         local-dir: "./"
-        server-dir: "domains/institutofelter.com.br/public_html/autoridadearquetipica/" 
+        server-dir: "public_html/domains/institutofelter.com.br/public_html/autoridadearquetipica/" 
         
 
