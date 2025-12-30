@@ -241,7 +241,8 @@ body {
 }
 
 .step-card {
-    background: rgba(212, 175, 55, 0.05); /* Gold muito suave */
+    background: rgba(212, 175, 55, 0.05);
+    /* Gold muito suave */
     border: 1px solid rgba(212, 175, 55, 0.2);
     border-radius: 8px;
     padding: 25px;
@@ -537,6 +538,30 @@ body {
     font-weight: 700;
 }
 
+.highlight-price {
+    font-size: 2.0rem;
+}
+
+.price-red-x {
+    position: relative;
+    display: inline-block;
+    color: var(--color-gold);
+}
+
+.price-red-x::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(to top right, transparent calc(50% - 2px), #FF0000 calc(50% - 2px), #FF0000 calc(50% + 2px), transparent calc(50% + 2px)),
+        linear-gradient(to bottom right, transparent calc(50% - 2px), #FF0000 calc(50% - 2px), #FF0000 calc(50% + 2px), transparent calc(50% + 2px));
+    z-index: 1;
+    pointer-events: none;
+}
+
 .offer-cta {
     text-align: center;
     margin-top: 50px;
@@ -751,6 +776,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -760,7 +786,8 @@ body {
 
 
 .fade-in {
-    opacity: 1; /* Torna visível imediatamente */
+    opacity: 1;
+    /* Torna visível imediatamente */
 }
 
 .fade-up {
@@ -787,6 +814,7 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+
     /* Reduz o padding das seções */
     .pain-section,
     .method-section,
@@ -813,7 +841,8 @@ body {
     /* Reseta a rotação 3D do mockup que não é interativa no mobile */
     .mockup-card {
         transform: rotateY(0deg);
-        padding: 40px 25px; /* Reduz padding interno */
+        padding: 40px 25px;
+        /* Reduz padding interno */
     }
 
     /* Reduz o padding dos cards de depoimento */
@@ -825,25 +854,42 @@ body {
     .value-table {
         padding: 30px 20px;
     }
+
     .method-content {
         grid-template-columns: 1fr;
     }
-    
+
     .guarantee-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .deliverables-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .value-row {
         font-size: 1rem;
     }
-    
+
     .value-price-final {
         font-size: 1.5rem;
+    }
+
+    .value-row.highlight-offer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .value-row.highlight-offer .value-item {
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+    }
+
+    .highlight-price {
+        font-size: 1.8rem;
     }
 }
 
@@ -852,7 +898,8 @@ body {
 /* Estilos para as imagens na seção de entregáveis */
 .card-image {
     margin-bottom: 20px;
-    height: 150px; /* Altura fixa para manter o alinhamento */
+    height: 150px;
+    /* Altura fixa para manter o alinhamento */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -882,32 +929,36 @@ body {
 
 /* 1. Garante que a rolagem horizontal seja desativada no nível mais alto */
 html {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 /* 2. Garante que NENHUM elemento ultrapasse a largura da tela */
 * {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 /* 3. Garante que imagens e vídeos sejam responsivos */
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* 4. Prevenção para layouts Flexbox */
-.flex, [class*="flex"] {
-  flex-wrap: wrap;
+.flex,
+[class*="flex"] {
+    flex-wrap: wrap;
 }
 
 .conteudo-animado span {
     font-family: var(--font-body);
     font-size: 1.2em;
     font-weight: 700;
-    color: #FFD700; /* Texto dourado */
-    padding-right: 50px; /* Espaçamento entre as repetições do texto */
+    color: #FFD700;
+    /* Texto dourado */
+    padding-right: 50px;
+    /* Espaçamento entre as repetições do texto */
     text-transform: uppercase;
     letter-spacing: 1px;
     text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
@@ -916,10 +967,13 @@ img, video {
 /* Definição da animação */
 @keyframes deslizar {
     0% {
-        transform: translateX(0); /* Posição inicial (sem deslocamento) */
+        transform: translateX(0);
+        /* Posição inicial (sem deslocamento) */
     }
+
     100% {
-        transform: translateX(-33.333%); /* Desloca o conteúdo em 1/3 (já que duplicamos 3 vezes) */
+        transform: translateX(-33.333%);
+        /* Desloca o conteúdo em 1/3 (já que duplicamos 3 vezes) */
     }
 }
 
@@ -927,6 +981,7 @@ img, video {
     .banner-faixa {
         padding: 8px 0;
     }
+
     .conteudo-animado span {
         font-size: 1em;
         padding-right: 30px;
